@@ -10,3 +10,5 @@ open a project in VScode, open terminal there (cmd+J)
 $ uvx --from git+https://github.com/github/spec-kit.git specify init --here
 then follow the prompts to finish applying spec-kit with copilot
 by now there would be an extra folder called '.github' pulled to the project
+
+/constitution -> /specify -> /plan -> /tasks -> /implement
