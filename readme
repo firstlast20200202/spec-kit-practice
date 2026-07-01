@@ -7,3 +7,4 @@ $ cd spec-kit-practice
 $ specify version   
 
 open a project in VScode, open terminal there (cmd+J)
+$ uvx --from git+https://github.com/github/spec-kit.git specify init --here
