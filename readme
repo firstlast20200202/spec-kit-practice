@@ -12,3 +12,4 @@ then follow the prompts to finish applying spec-kit with copilot
 by now there would be an extra folder called '.github' pulled to the project
 
 /constitution -> /specify -> /plan -> /tasks -> /implement
+不需要每次都run /constitution
