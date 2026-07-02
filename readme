@@ -17,5 +17,16 @@ optional commands would be /clarify which is following /specify, and /analyze wh
 
 how this workflow works:
 input and run /constitution blablablabla~~~~~~~~~~~~~~
-when we run /consitituion, it fires the constitution prompts, which tells the coding agent to fill in the constitution file in the memory folder by extracting any input we give it
+when we run /consitituion, it fires the constitution prompts, which tells the coding agent to fill in .specify/memory/constitution.md by extracting any input we give it
 and using that to fill in any placeholder tokens. 
+
+/specify (should focus on what and why instead of how)
+speckit.specify.agent.md: defines how AI should behave, think and execute the task.
+.specify/scripts/create-new-feature.sh: creates and manages a structured "feature workspace" under specs/, including naming, numbering, and spec.md initialization.
+
+
+
+
+difference of agent.md and prompt.md:
+agent.md: defines how AI behaves and executes tasks
+prompt.md: what's givein to AI as input
