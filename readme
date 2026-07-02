@@ -31,4 +31,4 @@ step 3:
 
 difference of agent.md and prompt.md:
 agent.md: defines how AI behaves and executes tasks
-prompt.md: what's given to AI as input
+prompt.md: a lightweight prompt template used as supporting context for the agent
