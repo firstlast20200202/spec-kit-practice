@@ -22,10 +22,11 @@ when we run /consitituion, it fires the constitution prompts, which tells the co
 and using that to fill in any placeholder tokens. 
 step 2:
 /specify (should focus on what and why instead of how)
-speckit.specify.agent.md: defines how AI should behave, think and execute the task.
-.specify/scripts/create-new-feature.sh: creates a new feature folder under /spec based on feature description, and generates spec.md.
-input and run /specify blabla - blablablabla~~~~~~~~~~~~~~
-it would generate folder specs / 001-create-new-page and file spec.md under ./specify
+speckit.specify.agent.md: defines how AI fills in the content of spec.md
+.specify/scripts/bash/create-new-feature.sh: creates a new feature folder under /spec based on feature description, and generates spec.md.
+input and run /specify <branch name> - blablablabla~~~~~~~~~~~~~~
+it would generate specs/001-<branch name>/spec.md under ./specify, spec.md inlcudes user stories, acceptance criteria, functional requriements etc.
+where to define this file
 step 3:
 
 
