@@ -14,3 +14,8 @@ by now there would be an extra folder called '.github' pulled to the project
 /constitution -> /specify -> /plan -> /tasks -> /implement
 /constitution doesnt need to be run every time as it is project-level governing principles.
 optional commands would be /clarify which is following /specify, and /analyze which is following /tasks
+
+how this workflow works:
+input and run /constitution blablablabla~~~~~~~~~~~~~~
+when we run /consitituion, it fires the constitution prompts, which tells the coding agent to fill in the constitution file in the memory folder by extracting any input we give it
+and using that to fill in any placeholder tokens. 
