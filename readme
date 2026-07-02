@@ -22,7 +22,7 @@ and using that to fill in any placeholder tokens.
 
 /specify (should focus on what and why instead of how)
 speckit.specify.agent.md: defines how AI should behave, think and execute the task.
-.specify/scripts/create-new-feature.sh: creates and manages a structured "feature workspace" under specs/, including naming, numbering, and spec.md initialization.
+.specify/scripts/create-new-feature.sh: creates a new feature folder under /spec based on feature description, and generates spec.md.
 
 
 
