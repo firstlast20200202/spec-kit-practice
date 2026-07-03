@@ -25,7 +25,7 @@ step 2:
 speckit.specify.agent.md: defines how AI fills in the content of spec.md
 .specify/scripts/bash/create-new-feature.sh: creates a new feature folder under /spec based on feature description, and generates spec.md.
 running /specify also creates a new branch
-input and run /specify <branch name> - blablablabla~~~~~~~~~~~~~~
+input and run /specify <branch name> - blablablabla~~~~~~~~~~~~~~            //?????????????????????????????????????????????????????   double check the input format
 it would generate specs/001-<branch name>/spec.md under ./specify, spec.md inlcudes user stories, acceptance criteria, functional requriements etc.
 where to define this file
 step 2.1:
