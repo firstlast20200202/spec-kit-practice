@@ -27,7 +27,11 @@ speckit.specify.agent.md: defines how AI fills in the content of spec.md
 input and run /specify <branch name> - blablablabla~~~~~~~~~~~~~~
 it would generate specs/001-<branch name>/spec.md under ./specify, spec.md inlcudes user stories, acceptance criteria, functional requriements etc.
 where to define this file
+step 2.1:
+/clarify
+goes through spec.md, and asks more questions which need replies to be provided 
 step 3:
+
 
 
 
