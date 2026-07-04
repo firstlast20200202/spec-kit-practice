@@ -35,7 +35,9 @@ step 3:
 /plam <outline any technical implementation details like framework, library, third party service etc.>
 in speckit.plan.agent.md it defines how this step works
 in ./specofy/templates/plan-template.md it defines the structure of plan.md
-
+run /plan blabla~~, it would create a bunch of files including plan.md under ./specify/specs/001-<branch name>, parallel to spec.md, as well as other css and html etc. files in root path.
+why there's no plan.md generated:
+The file was missing because the feature folder only contained the spec, so no plan artifact had been created yet. I’ve added it at plan.md.
 
 
 difference of agent.md and prompt.md:
