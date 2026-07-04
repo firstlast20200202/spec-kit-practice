@@ -32,8 +32,9 @@ step 2.1:
 /clarify
 goes through spec.md, and asks more questions which need replies to be provided 
 step 3:
-speckit.plan.agent.md
-setup-plan.ps1
+/plam <outline any technical implementation details like framework, library, third party service etc.>
+in speckit.plan.agent.md it defines how this step works
+in ./specofy/templates/plan-template.md it defines the structure of plan.md
 
 
 
