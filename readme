@@ -50,8 +50,12 @@ it just takes a final glean over everything done so far. it is a strictly read o
 just run /speckit.analyze, it would generate the analyze results in the copilot window
 step 5:
 /implement
-
-
+why didnt it generate /src:
+plan.md didnt mention src/
+OR
+/speckit.tasks didn’t create real actionable tasks, implement has nothing to execute
+OR 
+wrong feature has been input: .specify/feature.json missing or empty
 
 
 difference of agent.md and prompt.md:
