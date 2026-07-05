@@ -36,8 +36,8 @@ step 3:
 in speckit.plan.agent.md it defines how this step works
 in ./specofy/templates/plan-template.md it defines the structure of plan.md
 run /plan blabla~~, it would create a bunch of files including plan.md under ./specify/specs/001-<branch name>, parallel to spec.md, as well as other css and html etc. files in root path.
-why there's no plan.md generated:
-"The file was missing because the feature folder only contained the spec, so no plan artifact had been created yet. I’ve added it at plan.md." 2333
+Q: why there's no plan.md generated:
+A: "The file was missing because the feature folder only contained the spec, so no plan artifact had been created yet. I’ve added it at plan.md." 2333
 step 4:
 /tasks
 in speckit.tasks.agent.md file, it instructs the model to run `.specify/scripts/bash/setup-tasks.sh --json` which checks a few things in the current feature branch such as the planned 
@@ -50,15 +50,15 @@ it just takes a final glean over everything done so far. it is a strictly read o
 just run /speckit.analyze, it would generate the analyze results in the copilot window
 step 5:
 /implement
-why didnt it generate /src:
-plan.md didnt mention src/
+Q: why didnt it generate /src:
+A: plan.md didnt mention src/
 OR
 /speckit.tasks didn’t create real actionable tasks, implement has nothing to execute
 OR 
 wrong feature has been input: .specify/feature.json missing or empty
 
-why running /implement generates and edit more files than /speckit.implement:
-/implement is a more autonomous, less constrained coding agent, while /speckit.implement strictly follows Spec Kit’s spec/plan/tasks and therefore produces a narrower, more controlled set of changes.
+Q: why running /implement generates and edit more files than /speckit.implement:
+A: /implement is a more autonomous, less constrained coding agent, while /speckit.implement strictly follows Spec Kit’s spec/plan/tasks and therefore produces a narrower, more controlled set of changes.
 
 
 difference of agent.md and prompt.md:
