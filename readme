@@ -11,39 +11,39 @@ $ uvx --from git+https://github.com/github/spec-kit.git specify init --here
 then follow the prompts to finish applying spec-kit with copilot
 by now there would be an extra folder called '.github' pulled to the project
 
-/constitution -> /specify -> /plan -> /tasks -> /implement                  //newer version would be /speckit.constitution  /speckit.specify  etc. ??????????????????????????????
+/constitution -> /specify -> /plan -> /tasks -> /implement                  //newer version would be /speckit.constitution  /speckit.specify  etc. 
 /constitution doesnt need to be run every time as it is project-level governing principles.
 optional commands would be /clarify which is following /specify, and /analyze which is following /tasks
 
 how this workflow works:
 step 1:
-input and run /speckit.constitution blablablabla~~~~~~~~~~~~~~
-when we run /speckit.consitituion, it fires the constitution prompts, which tells the coding agent to fill in .specify/memory/constitution.md by extracting any input we give it
+input and run /constitution blablablabla~~~~~~~~~~~~~~
+when we run /consitituion, it fires the constitution prompts, which tells the coding agent to fill in .specify/memory/constitution.md by extracting any input we give it
 and using that to fill in any placeholder tokens. 
 step 2:
-/speckit.specify (should focus on what and why instead of how)
+/specify (should focus on what and why instead of how)
 speckit.specify.agent.md: defines how AI fills in the content of spec.md
 .specify/scripts/bash/create-new-feature.sh: creates a new feature folder under /spec based on feature description, and generates spec.md.
-running /speckit.specify also creates a new branch
-input and run /speckit.specify <branch name> - blablablabla~~~~~~~~~~~~~~            //?????????????????????????????????????????????????????   double check the input format
+running /specify also creates a new branch
+input and run /specify <branch name> - blablablabla~~~~~~~~~~~~~~            //?????????????????????????????????????????????????????   double check the input format
 it would generate specs/001-<branch name>/spec.md under ./specify, spec.md inlcudes user stories, acceptance criteria, functional requriements etc.
 where to define this file
 step 2.1:
-/speckit.clarify
+/clarify
 goes through spec.md, and asks more questions which need replies to be provided 
 step 3:
-/speckit.plan <outline any technical implementation details like framework, library, third party service etc.>
+/plan <outline any technical implementation details like framework, library, third party service etc.>
 in speckit.plan.agent.md it defines how this step works
 in ./specofy/templates/plan-template.md it defines the structure of plan.md
-run /speckit.plan blabla~~, it would create a bunch of files including plan.md under ./specify/specs/001-<branch name>, parallel to spec.md, as well as other css and html etc. files in root path.
+run /plan blabla~~, it would create a bunch of files including plan.md under ./specify/specs/001-<branch name>, parallel to spec.md, as well as other css and html etc. files in root path.
 why there's no plan.md generated:
 "The file was missing because the feature folder only contained the spec, so no plan artifact had been created yet. I’ve added it at plan.md." 2333
 step 4:
-/speckit.tasks
+/tasks
 in speckit.tasks.agent.md file, it instructs the model to run `.specify/scripts/bash/setup-tasks.sh --json` which checks a few things in the current feature branch such as the planned 
 documents paths inside the feature folder etc. And that script outputs those things to the terminal so the agent can use them for the rest of these instructions. It tells the agent to 
 read those documents if they exist, then it has to generate tasks using the tasks template file which is inside the template folder. 
-just run /speckit.tasks, tasks.md would be generated under ./specify/specs/001-<branch name>, parallel to spec.md and plan.md
+just run /tasks, tasks.md would be generated under ./specify/specs/001-<branch name>, parallel to spec.md and plan.md
 step 4.1:
 /speckit.analyze
 it just takes a final glean over everything done so far. it is a strictly read only action.
@@ -56,6 +56,9 @@ OR
 /speckit.tasks didn’t create real actionable tasks, implement has nothing to execute
 OR 
 wrong feature has been input: .specify/feature.json missing or empty
+
+why running /implement generates and edit more files than /speckit.implement:
+/implement is a more autonomous, less constrained coding agent, while /speckit.implement strictly follows Spec Kit’s spec/plan/tasks and therefore produces a narrower, more controlled set of changes.
 
 
 difference of agent.md and prompt.md:
