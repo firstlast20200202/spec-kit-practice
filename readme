@@ -38,7 +38,12 @@ in ./specofy/templates/plan-template.md it defines the structure of plan.md
 run /plan blabla~~, it would create a bunch of files including plan.md under ./specify/specs/001-<branch name>, parallel to spec.md, as well as other css and html etc. files in root path.
 why there's no plan.md generated:
 "The file was missing because the feature folder only contained the spec, so no plan artifact had been created yet. I’ve added it at plan.md." 2333
-
+step 4:
+/tasks
+in speckit.tasks.agent.md file, it instructs the model to run `.specify/scripts/bash/setup-tasks.sh --json` which checks a few things in the current feature branch such as the planned 
+documents paths inside the feature folder etc. And that script outputs those things to the terminal so the agent can use them for the rest of these instructions. It tells the agent to 
+read those documents if they exist, then it has to generate tasks using the tasks template file which is inside the template folder. 
+just run /tasks, tasks.md would be generated under ./specify/specs/001-<branch name>, parallel to spec.md and plan.md
 
 
 difference of agent.md and prompt.md:
