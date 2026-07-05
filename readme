@@ -45,9 +45,11 @@ documents paths inside the feature folder etc. And that script outputs those thi
 read those documents if they exist, then it has to generate tasks using the tasks template file which is inside the template folder. 
 just run /speckit.tasks, tasks.md would be generated under ./specify/specs/001-<branch name>, parallel to spec.md and plan.md
 step 4.1:
-/analyze
+/speckit.analyze
 it just takes a final glean over everything done so far. it is a strictly read only action.
 just run /speckit.analyze, it would generate the analyze results in the copilot window
+step 5:
+/implement
 
 
 
