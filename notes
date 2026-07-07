@@ -67,3 +67,5 @@ prompt.md: a lightweight prompt template used as supporting context for the agen
 
 
 open copilot window in VScode: ctrl+cmd+I
+
+sth else: in terminal vscode $ dotnet run --project .\src is for running a .net project
