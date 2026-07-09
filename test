@@ -4,7 +4,25 @@ if commit in VScode UI takes forever, just open Terminal in it:
 git add .
 git commit -m "blabla"
 
+extension structure
+.specify/
+└── extensions/
+    └── my-ext/
+        ├── manifest.yml           //important
+        ├── my-ext-config.yml
+        ├── templates/
+        └── commands/
+            └── testplan.md
+
 Extension Configuration:
 step 5:
 $ cd <my-project>
 $ specify extension add --dev ../spec-kit-practice/my-extension
+
+
+
+
+
+
+
+
