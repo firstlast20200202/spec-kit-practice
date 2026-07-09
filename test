@@ -23,7 +23,7 @@ Manifest Schema Reference section is telling how to write manifest,yml; Command 
 manifest: tells the system what commands we have; command file: tells the system how to execute the commands
 
 
-
+Configuration Files：
 
 
 
