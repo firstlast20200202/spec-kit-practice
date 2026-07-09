@@ -1,1 +1,1 @@
-somehow it would generate a file test-plan.md which includes unit tests and integration tests which can be run in deployment pipeline in OpenShift
+apply spect-kit extension: it would generate a file test-plan.md which includes unit tests and integration tests (in our case) which can be run in deployment pipeline in OpenShift
