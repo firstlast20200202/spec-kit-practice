@@ -1,2 +1,10 @@
 apply spec-kit extension: to generate a file test-plan.md which includes unit tests and integration tests which later can be run in deployment pipeline in OpenShift
 https://github.com/firstlast20200202/spec-kit/blob/main/extensions/EXTENSION-DEVELOPMENT-GUIDE.md
+if commit in VScode UI takes forever, just open Terminal in it:
+git add .
+git commit -m "blabla"
+
+Extension Configuration:
+step 5:
+$ cd <my-project>
+$ specify extension add --dev ../spec-kit-practice/my-extension
