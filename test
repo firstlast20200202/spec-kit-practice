@@ -23,7 +23,24 @@ Manifest Schema Reference section is telling how to write manifest,yml; Command 
 manifest: tells the system what commands we have; command file: tells the system how to execute the commands
 
 
-Configuration Files：
+Configuration Files：to seperate configuration from application behaviours
 
+.extensionignore files: similar to .gitignore, specify which files are not included in the extension package which would be sent to users for installation
+eg. 
+my-ext/
+├── manifest.yml
+├── commands/
+├── templates/
+├── README.md
+├── .git/
+├── .vscode/
+├── test/
+├── logs/
+└── .extensionignore
+
+commands/ ✅ 
+manifest.yml ✅ 
+templates/ ✅ 
+other files would be NOT sent to users
 
 
