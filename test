@@ -22,6 +22,7 @@ my-ext-config.yml is optional, in reality the structure would be:
 
 a hook is a mechanism that lets software automatically run some additional logic when a specifc event occurs.
 
+
 Extension Configuration:
 step 5:
 $ cd <my-project>
