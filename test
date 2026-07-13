@@ -54,3 +54,10 @@ templates/ ✅
 other files would be NOT sent to users
 
 
+
+
+
+
+
+to install spec-kit, you need to install python first
+pip install uv, uv install spec-kit
