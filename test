@@ -29,7 +29,7 @@ step 5:
 $ cd <my-project>
 $ specify extension add --dev ../spec-kit-practice/my-extension
 
-Manifest Schema Reference section is telling how to write manifest,yml; Command File Format section is telling how to write testplan.md
+Manifest Schema Reference section tells how to write manifest.yml; Command File Format section tells how to write testplan.md
 manifest: tells the system what commands we have; command file: tells the system how to execute the commands
 
 
