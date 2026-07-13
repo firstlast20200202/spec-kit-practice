@@ -21,6 +21,7 @@ my-ext-config.yml is optional, in reality the structure would be:
         └── commands/
 
 a hook is a mechanism that lets software automatically run some additional logic when a specifc event occurs.
+a complementary extension is an extension that works alongside another extension or the core SpecKit workflow. （是对其它extension或者core SpecKit workflow的一个补充）
 
 
 Extension Configuration:
