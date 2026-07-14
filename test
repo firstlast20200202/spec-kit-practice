@@ -33,7 +33,8 @@ Manifest Schema Reference section tells how to write manifest.yml; Command File 
 manifest: tells the system what commands we have; command file: tells the system how to execute the commands
 
 
-Configuration Files：to seperate configuration from application behaviours
+Configuration Files：
+to separate configuration from application behaviours
 
 .extensionignore files: similar to .gitignore, specify which files are not included in the extension package which would be sent to users for installation
 eg. 
@@ -54,9 +55,14 @@ templates/ ✅
 other files would be NOT sent to users
 
 
-
-
-
+Distribution:
+it refers to how an extension, preset, workflow or bundle is packaged and shared with users, it's about getting your extension from the developers to other users
+for example, if you create a testing extension, you can distribute it through:
+1. a spec-kit catalog
+2. a git repo
+3. a zip/package url
+4. company's private catalog
+users can install it with commands such as:
 
 
 to install spec-kit, you need to install python first
