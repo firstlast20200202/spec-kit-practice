@@ -68,3 +68,8 @@ $ specify extension add spec-kit-test
 
 to install spec-kit, you need to install python first
 pip install uv, uv install spec-kit
+
+
+to do:
+example extensions
+install spec-kit
