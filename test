@@ -57,12 +57,13 @@ other files would be NOT sent to users
 
 Distribution:
 it refers to how an extension, preset, workflow or bundle is packaged and shared with users, it's about getting your extension from the developers to other users
-for example, if you create a testing extension, you can distribute it through:
+for example, if you create a testing extension spec-kit-test, you can distribute it through:
 1. a spec-kit catalog
 2. a git repo
 3. a zip/package url
 4. company's private catalog
 users can install it with commands such as:
+specify extension add spec-kit-test
 
 
 to install spec-kit, you need to install python first
