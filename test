@@ -1,8 +1,8 @@
 apply spec-kit extension: to generate a file test-plan.md which includes unit tests and integration tests which later can be run in deployment pipeline in OpenShift
 https://github.com/firstlast20200202/spec-kit/blob/main/extensions/EXTENSION-DEVELOPMENT-GUIDE.md
 if commit in VScode UI takes forever, just open Terminal in it:
-git add .
-git commit -m "blabla"
+$ git add .
+$ git commit -m "blabla"
 
 extension structure：
 .specify/
@@ -63,7 +63,7 @@ for example, if you create a testing extension spec-kit-test, you can distribute
 3. a zip/package url
 4. company's private catalog
 users can install it with commands such as:
-specify extension add spec-kit-test
+$ specify extension add spec-kit-test
 
 
 to install spec-kit, you need to install python first
