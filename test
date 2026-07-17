@@ -70,8 +70,11 @@ install spec-kit:
 1. install python3 
 2. add python to the path in environment variables    
 3. $ pip install uv
-if installed with homebrew, step 2 and 3 can be skipped in MacOS, verify: $ which python3, $ which pip3
-verify: $ specify
+//if installed with homebrew, step 2 and 3 can be skipped in MacOS, verify: $ which python3, $ which pip3; otherwise edit path here $ vi ~/.zshrc  
+4. uvx --from git+https://github.com/github/spec-kit.git specify init --here        
+//if it outputs 'Initialization failed: [Errno 30] Read-only file system: '/.github'', it means that Spec-Kit is trying to initialize in the 
+//root directory (/), which is read-only on MacOS. the solution is geet into the project folder $ cd ~/Projects/my-project and run the commands again
+5. verify: $ specify
 
 
 to do:
