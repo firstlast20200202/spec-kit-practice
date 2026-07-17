@@ -66,8 +66,12 @@ users can install it with commands such as:
 $ specify extension add spec-kit-test
 
 
-to install spec-kit, you need to install python first
-pip install uv, uv install spec-kit
+install spec-kit:
+1. install python3 
+2. add python to the path in environment variables    
+3. $ pip install uv
+//if installed with homebrew, step 2 and 3 can be skipped in MacOS
+
 
 
 to do:
