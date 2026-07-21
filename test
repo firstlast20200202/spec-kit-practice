@@ -75,7 +75,3 @@ install spec-kit:
 //if it outputs 'Initialization failed: [Errno 30] Read-only file system: '/.github'', it means that Spec-Kit is trying to initialize in the 
 //root directory (/), which is read-only on MacOS. the solution is geet into the project folder $ cd ~/Projects/my-project and run the commands again
 5. verify: $ specify
-
-
-to do:
-example extensions
