@@ -1,3 +1,104 @@
 on angular-challenge
 
+setup in VScode:
+step 1, to run the project: 
+$ npm start
+
+step 2, open this project and get into the project folder, initialize spec-kit:
+uvx --from git+https://github.com/firstlast20200202/spec-kit.git specify init --here
+
+step 3, install extension:
+specify extension add --dev ./spec-kit-testing-extension
+
+$ git add .
+$ git commit -m "blabla"
+it outputs 'prettier --write [FAILED]' which means that dependencies are not installed yet, to solve the problem:
+$ npm install
+verify:
+$ npx prettier --version
+
+commit again, it still outputs: 
+'✖ prettier --write:
+[error] Explicitly specified pattern "/Users/lilywu/github/angular-challenges/.github/agents/speckit.testing-helper.inspect.agent.md" is a symbolic link.'
+which means prettier was asked to format a symbolic link (symlink), but it doesn't support formatting symlinks. As a result, lint-staged failed and 
+the Git commit was aborted. 
+
+A symbolic link (or symlink) is similar to a shortcut in Windows. It is a special type of file that points to another file or directory instead of 
+storing the actual content itself.
+say,
+.github/agents/
+└── speckit.testing-helper.inspect.agent.md
+        │
+        └────────► ../../.specify/extensions/testing-helper/agents/inspect.agent.md
+The actual file is located elsewhere: ../../.specify/extensions/testing-helper/agents/inspect.agent.md
+The file under .github/agents/ is not a real copy of the file. It is just a symbolic link that points to the actual file.
+This means that when you open or edit the file through the symlink, you are actually accessing the original file it points to. 
+Any changes are made to the original file, not to a separate copy.
+
+Why does Prettier report an error?
+because package.json contains the following lint-staged configuration:
+"lint-staged": {
+  "*.{ts,json,md}": [
+    "prettier --write"
+  ]
+}
+when you run 'git commit', the pre-commit hook triggers lint-staged, which passes all staged .ts, .json, and .md files to: $ prettier --write
+one of those staged files is: .github/agents/speckit.testing-helper.inspect.agent.md
+which is a symbolic link (symlink) rather than a regular file.
+since prettier does not support formatting symlinks, it reports an error, causing lint-staged to fail and the Git commit to be aborted.
+
+how to verify it's a symlink: 
+$ ls -l .github/agents
+if outputs are like speckit.testing-helper.inspect.agent.md -> ../../.specify/extensions/testing-helper/agents/inspect.agent.md
+the -> indicates that the file is a symbolic link pointing to another file, rather than an actual file itself. That's why Prettier refuses to format it.
+
+solution:
+in package.json:
+"lint-staged": {
+  "*.{ts,json,md}": [
+    "prettier --write"
+  ]
+}
+edit to:    
+"lint-staged": {
+  "spec-kit-testing-extension/**/*.{ts,json,md}": [
+    "prettier --write"
+  ]
+}
+in this way, it only formats files under spec-kit-testing-extension/, it doesnt edit files under .github/agents/
+
+commit again, gets:
+husky - commit-msg hook exited with code 1 (error)
+reason:
+.git/hooks/
+pre-commit
+    |
+    | Husky executes the pre-commit hook
+    | Usually runs lint-staged
+    | lint-staged runs tools such as Prettier/ESLint
+    |
+    v
+commit-msg
+    |
+    | Husky executes the commit-msg hook
+    | The commit-msg hook calls commitlint
+    | commitlint checks the commit message format
+    |
+    v
+Git commit is completed
+husky + commitlint requires conventional commits, which format is type(scope): message
+
+solution:
+$ git commit -m "feat: add testing helper extension"
+commit succeeds.
+
+test my extension in copilot:
+/speckit.testing-helper.inspect
+didnt work..
+
+
+
+开发完extension也是要单独安装的 $ specify extension add --dev ./spec-kit-testing-extension
+spec-kit-testing-extension = 你的 extension 项目的文件夹名字（repository / directory name）
+testing-helper = 这个 extension 在 Spec-Kit 里的 extension ID
 
