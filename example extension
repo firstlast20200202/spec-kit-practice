@@ -94,7 +94,7 @@ commit succeeds.
 
 test my extension in copilot:
 /speckit.testing-helper.inspect
-
+succeeds.
 
 
 开发完extension也是要单独安装的 $ specify extension add --dev ./spec-kit-testing-extension
